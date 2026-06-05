@@ -21,7 +21,7 @@ from supabase import create_client
 # Preencha para fixar a palavra-chave sem o usuário digitar.
 # Deixe como "" para o campo aparecer na tela.
 # =============================================================
-PALAVRA_BUSCA = ""
+PALAVRA_BUSCA = "T"
 # =============================================================
 
 # ---- Conexão Supabase via variáveis de ambiente ----
