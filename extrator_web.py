@@ -21,7 +21,7 @@ from supabase import create_client
 # Preencha para fixar a palavra-chave sem o usuário digitar.
 # Deixe como "" para o campo aparecer na tela.
 # =============================================================
-PALAVRA_BUSCA = "T"
+PALAVRA_BUSCA = ""
 # =============================================================
 
 # ---- Conexão Supabase via variáveis de ambiente ----
@@ -49,14 +49,14 @@ def registrar_historico(arquivo, ordem_servico, maquina, palavra, modo, total):
 
 
 st.set_page_config(
-    page_title="Extrator de Parágrafos",
+    page_title="Extrator de Ferramentas",
     page_icon="🔍",
     layout="centered"
 )
 
 # ---- Cabeçalho ----
-st.title("🔍 Extrator de Parágrafos")
-st.caption("Engenharia HKM — Ferramenta de busca em arquivos de programa CNC")
+st.title("🔍 Extrator de Ferramentas")
+st.caption("Alphatech Solutions — Ferramenta de busca em arquivos de programa CNC")
 st.divider()
 
 # ---- Abas: Extrator | Histórico ----
@@ -128,7 +128,7 @@ with aba_extrator:
         agora = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
         linhas = []
         linhas.append("=" * 60)
-        linhas.append("  EXTRATOR DE PARAGRAFOS POR PALAVRA-CHAVE")
+        linhas.append("  EXTRATOR DE FERRAMENTAS DO PROGRAMA CNC .TXT")
         linhas.append("=" * 60)
         if ordem_servico:
             linhas.append(f"  Ordem de Servico : {ordem_servico}")
@@ -243,3 +243,14 @@ with aba_historico:
 
     except Exception as e:
         st.error(f"Erro ao carregar histórico: {e}")
+
+# ---- Rodapé ----
+st.divider()
+st.markdown(
+    """
+    <div style='text-align: center; color: gray; font-size: 12px;'>
+        Desenvolvido por <b>Gilberto Artur Ferreira</b> — Engenheiro | Alphatech Solutions
+    </div>
+    """,
+    unsafe_allow_html=True
+)
