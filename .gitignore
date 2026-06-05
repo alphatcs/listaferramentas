@@ -1,0 +1,35 @@
+# Ambiente virtual
+venv/
+.venv/
+env/
+
+# Secrets e credenciais — NUNCA subir para o GitHub
+.env
+*.env
+secrets.toml
+.streamlit/secrets.toml
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+
+# PyInstaller
+*.spec
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
+
+# Arquivos de resultado gerados pela aplicação
+*_resultado_*.txt
+
+# VSCode
+.vscode/
+
+# Logs
+*.log
