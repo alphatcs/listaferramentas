@@ -156,7 +156,7 @@ with aba_extrator:
     with col1:
         ordem_servico = st.text_input("Número da Ordem de Serviço", placeholder="Ex: OS-2024-001")
     with col2:
-        maquina = st.text_input("Máquina", placeholder="Ex: CNC ROMI GL240")
+        maquina = st.text_input("Máquina", placeholder="Ex: CNC ROMI GL240").upper()
 
     st.subheader("3. Modo de busca")
     modo_busca = st.radio(
